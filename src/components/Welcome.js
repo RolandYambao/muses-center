@@ -20,11 +20,11 @@ const Welcome = () => {
                 </div>
                 <div className="card-content has-text-centered">
                     <h4>Enjoy the Wonders of the Center</h4>
-                    <p>
+                    <p id="bottomWords">
                         Unique Art Pieces of all Stripes
                     </p>
                 </div>
-                <br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
             </section>
 
         </div>

@@ -71,12 +71,12 @@ class Signup extends Component {
     
     return (
       <>
-        <section className="container">
+        <section className="container" id="signUp">
           <div className="columns is-multiline">
             <div className="column is-8 is-offset-2 register">
               <div className="columns">
                 <div className="column left">
-                  <h1 className="title is-1">Super Cool Website</h1>
+                  <h1 className="title is-1">The Muses Center</h1>
                   <h2 className="subtitle colored is-4">
                     Lorem ipsum dolor sit amet.
                   </h2>
@@ -196,6 +196,7 @@ class Signup extends Component {
               </nav>
             </div>
           </div>
+          <br /><br /><br /><br /><br />
         </section>
       </>
     );

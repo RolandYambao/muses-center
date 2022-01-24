@@ -14,7 +14,6 @@ const About = () => {
                     </div>
                 </div>
             </section>
-
             <section className="container">
                 <div className="card-image">
                     <figure className="image">
@@ -31,7 +30,7 @@ const About = () => {
                         A Place of Creation
                     </p>
                 </div>
-                <br /><br /><br /><br />
+                <br /><br /><br /><br /><br />
             </section>
         </div>
     )

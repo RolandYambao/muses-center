@@ -82,3 +82,11 @@ input:focus {
   color: var(--textLight);
   margin-right: 1rem;
 }
+
+#signUp {
+  margin-top: -100px;
+}
+
+/* body {
+  background: #3298DC;
+} */
