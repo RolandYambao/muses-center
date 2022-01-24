@@ -9,6 +9,30 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 60px; /* Set the fixed height of the footer here */
-  line-height: 60px; /* Vertically center the text there */
+}
+
+#logo {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+
+#museumBuilding {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 80%;
+}
+
+#museumInterior {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  height: 70%;
+}
+
+#title {
+  margin-top: -25px;
 }
