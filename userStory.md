@@ -1,1 +1,2 @@
 # The Muses Center
+The Muses Center is an Online Museum displaying various forms of unique art pieces properly curated by the art director. The center has a simple design where users sign up and see various museum art pieces through a slideshow. The Pieces can be quite interesting and there are various other pages that exist for miscellaneous affairs like a gift shope. Users can comment and like art pieces.
