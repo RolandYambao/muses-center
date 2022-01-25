@@ -30,7 +30,7 @@ const About = () => {
                         A Place of Creation
                     </p>
                 </div>
-                <br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br />
             </section>
         </div>
     )

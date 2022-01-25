@@ -24,7 +24,7 @@ const Welcome = () => {
                         Unique Art Pieces of all Stripes
                     </p>
                 </div>
-                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
             </section>
 
         </div>

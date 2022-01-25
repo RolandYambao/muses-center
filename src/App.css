@@ -35,5 +35,13 @@ body {
 }
 
 #bottomWords {
-  margin-bottom: -150px;
+  margin-bottom: -200px;
+}
+
+#signupLogo {
+  border-radius: 50%;
+}
+
+#login {
+  padding-top: 100px;
 }

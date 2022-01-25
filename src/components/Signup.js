@@ -65,10 +65,10 @@ class Signup extends Component {
       alert("Password needs to be at least 8 characters. Please try again.");
     }
   };
-  
+
   render() {
     if (this.state.redirect) return <Redirect to="/login" />; // You can have them redirected to profile (your choice)
-    
+
     return (
       <>
         <section className="container" id="signUp">
@@ -78,18 +78,20 @@ class Signup extends Component {
                 <div className="column left">
                   <h1 className="title is-1">The Muses Center</h1>
                   <h2 className="subtitle colored is-4">
-                    Lorem ipsum dolor sit amet.
+                    A Center for Creation
                   </h2>
                   <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Corporis ex deleniti aliquam tempora libero excepturi vero
-                    soluta odio optio sed.
+                    The Muses Center is proud to present the great creations of great minds,
+                    all work in the Muses Center is credited to their specific artist and are
+                    extremely valuable works of culture.
                   </p>
+                  <br />
+                  <img src="https://i.imgur.com/6DHX0zB.jpeg" id="signupLogo" alt="Golden Eye Logo" />
                 </div>
                 <div className="column right has-text-centered">
                   <h1 className="title is-4">Sign up today</h1>
                   <p className="description">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit
+                    All users must create an account to view the gallery
                   </p>
                   <form onSubmit={this.handleSubmit.bind(this)}>
                     <div className="field">
@@ -116,7 +118,7 @@ class Signup extends Component {
                           value={this.state.email}
                           onChange={this.handleEmail.bind(this)}
                           required
-                          />
+                        />
                       </div>
                     </div>
 
@@ -148,12 +150,12 @@ class Signup extends Component {
                       </div>
                     </div>
 
-                    <button type="submit" className="button is-block is-primary is-fullwidth is-medium">
+                    <button type="submit" className="button is-block is-info is-fullwidth is-medium">
                       Submit
                     </button>
                     <br />
                     <small>
-                      <em>Lorem ipsum dolor sit amet consectetur.</em>
+                      <em>Unauthorized Comments will be Deleted</em>
                     </small>
                   </form>
                 </div>
@@ -190,7 +192,7 @@ class Signup extends Component {
                     className="level-item"
                     style={{ color: "var(--textLight)" }}
                   >
-                    &copy; Super Cool Website. 2022 All Rights Reserved. 
+                    &copy; The Muses Center. 2022 All Rights Reserved.
                   </small>
                 </div>
               </nav>
