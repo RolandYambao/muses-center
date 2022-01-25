@@ -14,17 +14,17 @@ class Store extends Component {
 
     handle100Buying() {
         this.setState({
-            $100Buy: 'Thanks for your Money'
+            $100Buy: 'Thank You for Buying'
         });
     }
     handle500Buying() {
         this.setState({
-            $500Buy: 'Thanks for your Money'
+            $500Buy: 'Thank You for Buying'
         });
     }
     handle1000Buying() {
         this.setState({
-            $1000Buy: 'Thanks for your Money'
+            $1000Buy: 'Thank You for Buying'
         });
     }
 
@@ -34,8 +34,8 @@ class Store extends Component {
                 <section className="hero bg-dark is-small">
                     <div className="hero-body">
                         <div className="container has-text-centered">
-                            <p className="title">Muses Center Store</p>
-                            <p className="subtitle">Welcome</p>
+                            <p className="title" id="storeTitle" >Muses Center Store</p>
+                            <p className="subtitle" id="storeTitle" >Welcome</p>
                         </div>
                     </div>
                 </section>
