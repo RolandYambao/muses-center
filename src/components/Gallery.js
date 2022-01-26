@@ -1,7 +1,75 @@
-import React, { Component } from 'react';
 import './Gallery.css';
+import React, { Component } from 'react';
+import axios from "axios";
+import setAuthToken from '../../utils/setAuthToken';
+import Comment from "./Comment";
+const { REACT_APP_SERVER_URL } = process.env;
+
 
 class Gallery extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            redirect: false,
+        };
+    }
+
+    handleComment(e) {
+        this.setState({
+            content: e.target.value,
+        })
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+
+        const commentData = {
+            content: this.state.content,
+        }
+
+        axios.post(`${REACT_APP_SERVER_URL}/users/comment`, commentData)
+            .then(response => {
+                const { token } = response.data;
+                // save token to localStorage
+                localStorage.setItem('jwtToken', token);
+                // set token to headers
+                setAuthToken(token);
+                // decode token to get the user data
+                const decoded = jwt_decode(token);
+                // set the current user
+                this.props.nowCurrentUser(decoded); // funnction passed down as props.
+            })
+            .catch(error => {
+                alert('No Comment Posted');
+            });
+    };
+
+    componentDidMount() {
+        let token = localStorage.getItem('jwtToken')  //grabs token 
+        setAuthToken(token); //function to auth saved token (seprate JS file)
+        axios.get(`${REACT_APP_SERVER_URL}/users/Comment`,
+            {
+                header: { 'Access-Control-Allow-Origin': '*' }
+            })
+            .then((response) => {
+                this.setState({
+                    data: response.data
+                })
+            })
+            .catch((error) => {
+
+            })
+    }
+
+    displayComments() {
+        const displayComments = this.state.data.comments.map((a, idx) => {
+            return (
+                <Comment key={idx} content={a.content} />
+            )
+        });
+        return displayComments;
+    }
+
     render() {
         return (
             <div>
@@ -67,6 +135,7 @@ class Gallery extends Component {
                     <input type="text" name="content" placeholder="Your Anonymous Critique Here" id="commentBox" />
                     <input type="submit" id="comment" />
                 </form>
+                {this.displayComments()}
                 <br /><br /><br /><br />
             </div>
         );
