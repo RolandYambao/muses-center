@@ -5,7 +5,7 @@ class Gallery extends Component {
     render() {
         return (
             <div>
-                <div class="main1" id="galleyCenter">
+                <div class="main1">
                     <ul>
                         <li>
                             <div class="slidetitle">

@@ -1,9 +1,9 @@
 .main1 li {
 /* forgot to put '.main' - 40 min debug :) */
 position: relative;
-display: block;
-width: 160px;
-float:left;
+display: grid;
+width: 160px; 
+float: left;
 }
 	
 .slidetitle {
@@ -44,9 +44,4 @@ width: 500px;
     color: white;
     background-color: #363C42;
     border-radius: 100px;
-}
-
-#galleryCenter {
-    display: flex;
-    justify-content: center;
 }
