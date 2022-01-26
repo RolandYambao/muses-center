@@ -71,10 +71,15 @@ class Gallery extends Component {
                                 <img src="https://i.imgur.com/6DHX0zB.jpeg" />
                             </a>
                         </li>
-                        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                     </ul>
                 </div>
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <form method="POST" action="/comment" id="commentSection">
+                    <input type="text" name="content" placeholder="Your Comment Here" id="commentBox" />
+                    <input type="submit" id="comment" />
+                </form>
+                <br /><br /><br /><br /><br />
             </div>
         );
     }
