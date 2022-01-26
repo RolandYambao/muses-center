@@ -6,25 +6,43 @@ class Store extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            $5Buy: '$5 Buy',
+            $10Buy: '$10 Buy',
+            $50Buy: '$50 Buy',
             $100Buy: '$100 Buy',
+            $250Buy: '$250 Buy',
             $500Buy: '$500 Buy',
-            $1000Buy: '$1000 Buy',
         }
     }
 
+    handle5Buying() {
+        this.setState({
+            $5Buy: 'Thank You for Buying'
+        });
+    }
+    handle10Buying() {
+        this.setState({
+            $10Buy: 'Thank You for Buying'
+        });
+    }
+    handle50Buying() {
+        this.setState({
+            $50Buy: 'Thank You for Buying'
+        });
+    }
     handle100Buying() {
         this.setState({
             $100Buy: 'Thank You for Buying'
         });
     }
+    handle250Buying() {
+        this.setState({
+            $250Buy: 'Thank You for Buying'
+        });
+    }
     handle500Buying() {
         this.setState({
             $500Buy: 'Thank You for Buying'
-        });
-    }
-    handle1000Buying() {
-        this.setState({
-            $1000Buy: 'Thank You for Buying'
         });
     }
 
@@ -51,7 +69,7 @@ class Store extends Component {
                                 <div className="card-image">
                                     <figure className="image is-4by3">
                                         <img
-                                            src=""
+                                            src="https://i.imgur.com/6DHX0zB.jpeg"
                                             alt="Placeholder image"
                                             className="modal-button"
                                             data-target="modal-image2"
@@ -65,10 +83,10 @@ class Store extends Component {
                                             Art Piece
                                         </p>
                                         <span
-                                            className="button is-link modal-button" onClick={this.handle100Buying.bind(this)}
+                                            className="button is-link modal-button" onClick={this.handle5Buying.bind(this)}
                                             data-target="modal-image2"
                                         >
-                                            {this.state.$100Buy}
+                                            {this.state.$5Buy}
                                         </span>
                                     </div>
                                 </div>
@@ -79,7 +97,7 @@ class Store extends Component {
                                 <div className="card-image">
                                     <figure className="image is-4by3">
                                         <img
-                                            src=""
+                                            src="https://i.imgur.com/6DHX0zB.jpeg"
                                             alt="Placeholder image"
                                         />
                                     </figure>
@@ -91,10 +109,10 @@ class Store extends Component {
                                             Art Piece
                                         </p>
                                         <span
-                                            className="button is-link modal-button" onClick={this.handle500Buying.bind(this)}
+                                            className="button is-link modal-button" onClick={this.handle10Buying.bind(this)}
                                             data-target="modal-card"
                                         >
-                                            {this.state.$500Buy}
+                                            {this.state.$10Buy}
                                         </span>
                                     </div>
                                 </div>
@@ -105,7 +123,7 @@ class Store extends Component {
                                 <div className="card-image">
                                     <figure className="image is-4by3">
                                         <img
-                                            src=""
+                                            src="https://i.imgur.com/6DHX0zB.jpeg"
                                             alt="Placeholder image"
                                         />
                                     </figure>
@@ -117,10 +135,10 @@ class Store extends Component {
                                             Art Piece
                                         </p>
                                         <span
-                                            className="button is-link modal-button" onClick={this.handle1000Buying.bind(this)}
+                                            className="button is-link modal-button" onClick={this.handle50Buying.bind(this)}
                                             data-target="modal-image"
                                         >
-                                            {this.state.$1000Buy}
+                                            {this.state.$50Buy}
                                         </span>
                                     </div>
                                 </div>
@@ -136,7 +154,7 @@ class Store extends Component {
                                 <div className="card-image">
                                     <figure className="image is-4by3">
                                         <img
-                                            src=""
+                                            src="https://i.imgur.com/6DHX0zB.jpeg"
                                             alt="Placeholder image"
                                             className="modal-button"
                                             data-target="modal-image2"
@@ -164,7 +182,7 @@ class Store extends Component {
                                 <div className="card-image">
                                     <figure className="image is-4by3">
                                         <img
-                                            src=""
+                                            src="https://i.imgur.com/6DHX0zB.jpeg"
                                             alt="Placeholder image"
                                         />
                                     </figure>
@@ -176,10 +194,10 @@ class Store extends Component {
                                             Art Piece
                                         </p>
                                         <span
-                                            className="button is-link modal-button" onClick={this.handle500Buying.bind(this)}
+                                            className="button is-link modal-button" onClick={this.handle250Buying.bind(this)}
                                             data-target="modal-card"
                                         >
-                                            {this.state.$500Buy}
+                                            {this.state.$250Buy}
                                         </span>
                                     </div>
                                 </div>
@@ -190,7 +208,7 @@ class Store extends Component {
                                 <div className="card-image">
                                     <figure className="image is-4by3">
                                         <img
-                                            src=""
+                                            src="https://i.imgur.com/6DHX0zB.jpeg"
                                             alt="Placeholder image"
                                         />
                                     </figure>
@@ -202,10 +220,10 @@ class Store extends Component {
                                             Art Piece
                                         </p>
                                         <span
-                                            className="button is-link modal-button" onClick={this.handle1000Buying.bind(this)}
+                                            className="button is-link modal-button" onClick={this.handle500Buying.bind(this)}
                                             data-target="modal-image"
                                         >
-                                            {this.state.$1000Buy}
+                                            {this.state.$500Buy}
                                         </span>
                                     </div>
                                 </div>
