@@ -5,3 +5,7 @@
 #storeBox {
     margin-top: 25px;
 }
+
+#storeImage {
+    object-fit: cover;
+}

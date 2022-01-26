@@ -72,6 +72,7 @@ class Store extends Component {
                                             alt="Placeholder image"
                                             className="modal-button"
                                             data-target="modal-image2"
+                                            id="storeImage"
                                         />
                                     </figure>
                                 </div>
@@ -98,6 +99,7 @@ class Store extends Component {
                                         <img
                                             src="https://i.imgur.com/6DHX0zB.jpeg"
                                             alt="Placeholder image"
+                                            id="storeImage"
                                         />
                                     </figure>
                                 </div>
@@ -124,6 +126,7 @@ class Store extends Component {
                                         <img
                                             src="https://i.imgur.com/6DHX0zB.jpeg"
                                             alt="Placeholder image"
+                                            id="storeImage"
                                         />
                                     </figure>
                                 </div>
@@ -157,6 +160,7 @@ class Store extends Component {
                                             alt="Placeholder image"
                                             className="modal-button"
                                             data-target="modal-image2"
+                                            id="storeImage"
                                         />
                                     </figure>
                                 </div>
@@ -183,6 +187,7 @@ class Store extends Component {
                                         <img
                                             src="https://i.imgur.com/6DHX0zB.jpeg"
                                             alt="Placeholder image"
+                                            id="storeImage"
                                         />
                                     </figure>
                                 </div>
@@ -209,6 +214,7 @@ class Store extends Component {
                                         <img
                                             src="https://i.imgur.com/6DHX0zB.jpeg"
                                             alt="Placeholder image"
+                                            id="storeImage"
                                         />
                                     </figure>
                                 </div>
