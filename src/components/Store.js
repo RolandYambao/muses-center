@@ -53,7 +53,6 @@ class Store extends Component {
                     <div className="hero-body">
                         <div className="container has-text-centered">
                             <p className="title" id="storeTitle" >Muses Center Store</p>
-                            <p className="subtitle" id="storeTitle" >Welcome</p>
                         </div>
                     </div>
                 </section>

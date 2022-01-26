@@ -45,3 +45,8 @@ width: 500px;
     background-color: #363C42;
     border-radius: 100px;
 }
+
+#galleryCenter {
+    display: flex;
+    justify-content: center;
+}
