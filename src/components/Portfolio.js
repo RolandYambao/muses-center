@@ -2,7 +2,7 @@ import './Portfolio.css';
 
 import React, { Component } from 'react';
 import axios from "axios";
-import Comment from "./Comment";
+import Piece from "./Piece";
 import jwt_decode from 'jwt-decode';
 import setAuthToken from '../utils/setAuthToken';
 const { REACT_APP_SERVER_URL } = process.env;
@@ -81,7 +81,7 @@ class Portfolio extends Component {
     }
 
     displayPortfolio() {
-        const displayPortfolio = this.state.data.map((a, idx) => {
+        const displayPortfolio = this.state.users.map((a, idx) => {
             return (
                 <Piece key={idx} pictureUrl={a.pictureUrl}
                     title={a.title} description={a.description} />
@@ -94,6 +94,7 @@ class Portfolio extends Component {
         return (
             <div>
                 <h1>Test</h1>
+                {this.displayPortfolio()}
             </div>
         );
     }
