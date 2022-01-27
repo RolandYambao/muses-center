@@ -12,11 +12,12 @@ class Gallery extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            redirect: false,
+            comments: [],
         };
     }
 
     handleComment(e) {
+        e.preventDefault();
         this.setState({
             content: e.target.value,
         })
@@ -29,7 +30,7 @@ class Gallery extends Component {
             content: this.state.content,
         }
 
-        axios.post(`${REACT_APP_SERVER_URL}/users/comment`, commentData)
+        axios.post(`${REACT_APP_SERVER_URL}/comments`, commentData)
             .then(response => {
                 const { token } = response.data;
                 // save token to localStorage
@@ -47,10 +48,10 @@ class Gallery extends Component {
     };
 
     componentDidMount() {
-        axios.get(`${REACT_APP_SERVER_URL}/comment`)
+        axios.get(`${REACT_APP_SERVER_URL}/comments`)
             .then((response) => {
                 this.setState({
-                    data: response.data,
+                    comments: response.data.content
                 });
             })
             .catch((error) => {
@@ -58,14 +59,14 @@ class Gallery extends Component {
             });
     }
 
-    // displayComments() {
-    //     const displayComments = this.state.data.comments.map((a, idx) => {
-    //         return (
-    //             <Comment key={idx} content={a.content} />
-    //         )
-    //     });
-    //     return displayComments;
-    // }
+    displayComments() {
+        const displayComments = this.state.data.comments.map((a, idx) => {
+            return (
+                <Comment key={idx} content={a.content} />
+            )
+        });
+        return displayComments;
+    }
 
     render() {
         return (
@@ -128,9 +129,9 @@ class Gallery extends Component {
                 </div>
 
                 <br /><br /><br /><br /><br />
-                <form id="commentSection">
+                <form id="commentSection" onSubmit={this.handleSubmit.bind(this)}>
                     <input type="text" name="content" value={this.state.content} onChange={this.handleComment.bind(this)} placeholder="Your Anonymous Critique Here" id="commentBox" />
-                    <input type="submit" id="comment" />
+                    <button type="submit" id="comment">Submit</button>
                 </form>
                 {/* {this.displayComments()} */}
                 <br /><br /><br /><br />
