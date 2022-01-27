@@ -33,18 +33,18 @@ function App() {
   const [currentUser, setCurrentUser] = useState('');
   const [isAuthenticated, setIsAuthenticated] = useState(true);
 
-  useEffect(() => {
-    let token;
+  // useEffect(() => {
+  //   let token;
 
-    if (!localStorage.getItem('jwtToken')) {
-      setIsAuthenticated(false);
-      // console.log('====> Authenticated is now FALSE');
-    } else {
-      token = jwt_decode(localStorage.getItem('jwtToken'));
-      setAuthToken(localStorage.getItem('jwtToken'));
-      setCurrentUser(token);
-    }
-  }, []);
+  //   if (!localStorage.getItem('jwtToken')) {
+  //     setIsAuthenticated(false);
+  //     // console.log('====> Authenticated is now FALSE');
+  //   } else {
+  //     token = jwt_decode(localStorage.getItem('jwtToken'));
+  //     setAuthToken(localStorage.getItem('jwtToken'));
+  //     setCurrentUser(token);
+  //   }
+  // }, []);
 
   const nowCurrentUser = (userData) => {
     // console.log('===> nowCurrentUser is here.');

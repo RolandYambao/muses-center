@@ -12,7 +12,7 @@ class Gallery extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            comments: [],
+            data: [],
         };
     }
 
@@ -51,7 +51,7 @@ class Gallery extends Component {
         axios.get(`${REACT_APP_SERVER_URL}/comments`)
             .then((response) => {
                 this.setState({
-                    comments: response.data.content
+                    data: response.data
                 });
             })
             .catch((error) => {
@@ -60,7 +60,7 @@ class Gallery extends Component {
     }
 
     displayComments() {
-        const displayComments = this.state.data.comments.map((a, idx) => {
+        const displayComments = this.state.data.map((a, idx) => {
             return (
                 <Comment key={idx} content={a.content} />
             )
@@ -133,7 +133,7 @@ class Gallery extends Component {
                     <input type="text" name="content" value={this.state.content} onChange={this.handleComment.bind(this)} placeholder="Your Anonymous Critique Here" id="commentBox" />
                     <button type="submit" id="comment">Submit</button>
                 </form>
-                {/* {this.displayComments()} */}
+                {this.displayComments()}
                 <br /><br /><br /><br />
             </div>
         );
