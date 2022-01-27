@@ -3,6 +3,8 @@ import './Gallery.css';
 import React, { Component } from 'react';
 import axios from "axios";
 import Comment from "./Comment";
+import jwt_decode from 'jwt-decode';
+import setAuthToken from '../utils/setAuthToken';
 const { REACT_APP_SERVER_URL } = process.env;
 
 
@@ -20,6 +22,30 @@ class Gallery extends Component {
         })
     }
 
+    handleSubmit = (e) => {
+        e.preventDefault();
+
+        const commentData = {
+            content: this.state.content,
+        }
+
+        axios.post(`${REACT_APP_SERVER_URL}/users/comment`, commentData)
+            .then(response => {
+                const { token } = response.data;
+                // save token to localStorage
+                localStorage.setItem('jwtToken', token);
+                // set token to headers
+                setAuthToken(token);
+                // decode token to get the user data
+                const decoded = jwt_decode(token);
+                // set the current user
+                this.props.nowCurrentUser(decoded); // funnction passed down as props.
+            })
+            .catch(error => {
+                alert('No Comment Posted');
+            });
+    };
+
     componentDidMount() {
         axios.get(`${REACT_APP_SERVER_URL}/comment`)
             .then((response) => {
@@ -32,14 +58,14 @@ class Gallery extends Component {
             });
     }
 
-    displayComments() {
-        const displayComments = this.state.data.comments.map((a, idx) => {
-            return (
-                <Comment key={idx} content={a.content} />
-            )
-        });
-        return displayComments;
-    }
+    // displayComments() {
+    //     const displayComments = this.state.data.comments.map((a, idx) => {
+    //         return (
+    //             <Comment key={idx} content={a.content} />
+    //         )
+    //     });
+    //     return displayComments;
+    // }
 
     render() {
         return (
@@ -102,11 +128,11 @@ class Gallery extends Component {
                 </div>
 
                 <br /><br /><br /><br /><br />
-                <form method="POST" action="/comment" id="commentSection">
-                    <input type="text" name="content" placeholder="Your Anonymous Critique Here" id="commentBox" />
+                <form id="commentSection">
+                    <input type="text" name="content" value={this.state.content} onChange={this.handleComment.bind(this)} placeholder="Your Anonymous Critique Here" id="commentBox" />
                     <input type="submit" id="comment" />
                 </form>
-                {this.displayComments()}
+                {/* {this.displayComments()} */}
                 <br /><br /><br /><br />
             </div>
         );
