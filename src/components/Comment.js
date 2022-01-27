@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Comment.css'
 
 class Comment extends Component {
     constructor(props) {
@@ -8,7 +9,10 @@ class Comment extends Component {
     render() {
         return (
             <div>
-                <h1>{this.props.content}</h1>
+                <div id="boxComment">
+                    <h1 id="critique">{this.props.content}</h1>
+                    <br />
+                </div>
             </div>
         );
     }
