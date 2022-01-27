@@ -58,7 +58,7 @@ class Login extends Component {
       <>
         <div className="container m-t-30 has-text-centered" id="login">
           <div className="column is-4 is-offset-4">
-          <h1 id="loginWords">You Must Login to see the Gallery and Store</h1>
+          <h1 id="loginWords">You Must Login to see the Gallery, Store, and access your Portfolio</h1>
             <div className="box">
               <figure className="avatar">
                 <img src="https://i.imgur.com/6DHX0zB.jpeg" style={{ width: '150px', height: '150px' }} alt="Golden Eye Logo" />
