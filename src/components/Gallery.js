@@ -32,15 +32,7 @@ class Gallery extends Component {
 
         axios.post(`${REACT_APP_SERVER_URL}/comments`, commentData)
             .then(response => {
-                const { token } = response.data;
-                // save token to localStorage
-                localStorage.setItem('jwtToken', token);
-                // set token to headers
-                setAuthToken(token);
-                // decode token to get the user data
-                const decoded = jwt_decode(token);
-                // set the current user
-                this.props.nowCurrentUser(decoded); // funnction passed down as props.
+               window.location.reload();
             })
             .catch(error => {
                 alert('No Comment Posted');
@@ -133,6 +125,7 @@ class Gallery extends Component {
                     <input type="text" name="content" value={this.state.content} onChange={this.handleComment.bind(this)} placeholder="Your Anonymous Critique Here" id="commentBox" />
                     <button type="submit" id="comment">Submit</button>
                 </form>
+                <br />
                 {this.displayComments()}
                 <br /><br /><br /><br />
             </div>
