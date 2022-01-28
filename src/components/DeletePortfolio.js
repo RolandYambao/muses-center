@@ -22,37 +22,13 @@ class EditPortfolio extends Component {
         })
     }
 
-    handlePicture(e) {
-        e.preventDefault();
-        this.setState({
-            pictureUrl: e.target.value,
-        })
-    }
-
-    handleTitle(e) {
-        e.preventDefault();
-        this.setState({
-            title: e.target.value,
-        })
-    }
-
-    handleDescription(e) {
-        e.preventDefault();
-        this.setState({
-            description: e.target.value,
-        })
-    }
-
     handleSubmit = (e) => {
         e.preventDefault();
         const portfolioData = {
             portfolioNumber: this.state.portfolioNumber,
-            pictureUrl: this.state.pictureUrl,
-            title: this.state.title,
-            description: this.state.description,
         }
 
-        axios.put(`${REACT_APP_SERVER_URL}/users/edit-portfolio`, portfolioData)
+        axios.delete(`${REACT_APP_SERVER_URL}/users/delete-portfolio`, portfolioData)
             .then(response => {
                 const { token } = response.data;
                 // save token to localStorage
@@ -74,9 +50,6 @@ class EditPortfolio extends Component {
             <div>
                 <form id="commentSection" onSubmit={this.handleSubmit.bind(this)}>
                 <input type="text" name="portfolioPiece" value={this.state.portfolioNumber} onChange={this.handlePortfolioNumber.bind(this)} placeholder="Portfolio Piece Number" id="commentBox" />
-                    <input type="text" name="picture" value={this.state.pictureUrl} onChange={this.handlePicture.bind(this)} placeholder="Profile Piece Picture URL" id="commentBox" />
-                    <input type="text" name="title" value={this.state.title} onChange={this.handleTitle.bind(this)} placeholder="Portfolio Piece Title" id="commentBox" />
-                    <input type="text" name="decription" value={this.state.description} onChange={this.handleDescription.bind(this)} placeholder="Portfolio Piece Description" id="commentBox" />
                     <button type="submit" id="comment">Submit</button>
                 </form>
             </div>
