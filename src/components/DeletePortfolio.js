@@ -48,10 +48,10 @@ class EditPortfolio extends Component {
     render() {
         return (
             <div>
-                <form id="commentSection" onSubmit={this.handleSubmit.bind(this)}>
-                    <input type="text" name="portfolioPiece" value={this.state.portfolioNumber} onChange={this.handlePortfolioNumber.bind(this)} placeholder="Portfolio Piece Number" id="commentBox" />
+                <form id="portfolioInputSection" onSubmit={this.handleSubmit.bind(this)}>
+                    <input type="text" name="portfolioPiece" value={this.state.portfolioNumber} onChange={this.handlePortfolioNumber.bind(this)} placeholder="Portfolio Piece Number" id="portfolioInputBox" />
                     <br />
-                    <button type="submit" id="comment">Submit</button>
+                    <button type="submit" id="portfolioInput">Submit</button>
                 </form>
             </div>
         );

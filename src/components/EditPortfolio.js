@@ -72,16 +72,16 @@ class EditPortfolio extends Component {
     render() {
         return (
             <div>
-                <form id="commentSection" onSubmit={this.handleSubmit.bind(this)}>
-                    <input type="text" name="portfolioPiece" value={this.state.portfolioNumber} onChange={this.handlePortfolioNumber.bind(this)} placeholder="Portfolio Piece Number" id="commentBox" />
+                <form id="portfolioInputSection" onSubmit={this.handleSubmit.bind(this)}>
+                    <input type="text" name="portfolioPiece" value={this.state.portfolioNumber} onChange={this.handlePortfolioNumber.bind(this)} placeholder="Portfolio Piece Number" id="portfolioInputBox" />
                     <br />
-                    <input type="text" name="picture" value={this.state.pictureUrl} onChange={this.handlePicture.bind(this)} placeholder="Profile Piece Picture URL" id="commentBox" />
+                    <input type="text" name="picture" value={this.state.pictureUrl} onChange={this.handlePicture.bind(this)} placeholder="Profile Piece Picture URL" id="portfolioInputBox" />
                     <br />
-                    <input type="text" name="title" value={this.state.title} onChange={this.handleTitle.bind(this)} placeholder="Portfolio Piece Title" id="commentBox" />
+                    <input type="text" name="title" value={this.state.title} onChange={this.handleTitle.bind(this)} placeholder="Portfolio Piece Title" id="portfolioInputBox" />
                     <br />
-                    <input type="text" name="decription" value={this.state.description} onChange={this.handleDescription.bind(this)} placeholder="Portfolio Piece Description" id="commentBox" />
+                    <input type="text" name="decription" value={this.state.description} onChange={this.handleDescription.bind(this)} placeholder="Portfolio Piece Description" id="portfolioInputBox" />
                     <br />
-                    <button type="submit" id="comment">Submit</button>
+                    <button type="submit" id="portfolioInput">Submit</button>
                 </form>
             </div>
         );
