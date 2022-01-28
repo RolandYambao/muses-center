@@ -54,6 +54,11 @@ class Portfolio extends Component {
                         </div>
                     </div>
                 </section>
+                <section className="buttonSection">
+                    <a className="button is-primary" id="button1" type="button" href="/create-portfolio">Add Portfolio Piece</a>
+                    <a className="button is-info" id="button2" type="button" href="/edit-portfolio">Edit Portfolio Piece</a>
+                    <a className="button is-danger" id="button3" type="button" href="/delete-portfolio">Delete Portfolio Piece</a>
+                </section>
                 {this.displayPortfolio()}
             </div>
         );
