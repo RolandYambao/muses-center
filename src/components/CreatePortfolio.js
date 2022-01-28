@@ -67,8 +67,11 @@ class CreatePortfolio extends Component {
             <div>
                 <form id="commentSection" onSubmit={this.handleSubmit.bind(this)}>
                     <input type="text" name="picture" value={this.state.pictureUrl} onChange={this.handlePicture.bind(this)} placeholder="Profile Piece Picture URL" id="commentBox" />
+                    <br />
                     <input type="text" name="title" value={this.state.title} onChange={this.handleTitle.bind(this)} placeholder="Portfolio Piece Title" id="commentBox" />
+                    <br />
                     <input type="text" name="decription" value={this.state.description} onChange={this.handleDescription.bind(this)} placeholder="Portfolio Piece Description" id="commentBox" />
+                    <br />
                     <button type="submit" id="comment">Submit</button>
                 </form>
             </div>

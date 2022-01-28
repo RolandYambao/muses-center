@@ -49,7 +49,8 @@ class EditPortfolio extends Component {
         return (
             <div>
                 <form id="commentSection" onSubmit={this.handleSubmit.bind(this)}>
-                <input type="text" name="portfolioPiece" value={this.state.portfolioNumber} onChange={this.handlePortfolioNumber.bind(this)} placeholder="Portfolio Piece Number" id="commentBox" />
+                    <input type="text" name="portfolioPiece" value={this.state.portfolioNumber} onChange={this.handlePortfolioNumber.bind(this)} placeholder="Portfolio Piece Number" id="commentBox" />
+                    <br />
                     <button type="submit" id="comment">Submit</button>
                 </form>
             </div>
