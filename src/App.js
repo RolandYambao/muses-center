@@ -18,6 +18,8 @@ import Profile from './components/Profile';
 import Welcome from './components/Welcome';
 import Gallery from './components/Gallery';
 import Portfolio from './components/Portfolio';
+import CreatePortfolio from './components/CreatePortfolio';
+import EditPortfolio from './components/EditPortfolio';
 import Store from './components/Store';
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
@@ -74,6 +76,8 @@ function App() {
           />
           <PrivateRoute path="/gallery" component={Gallery} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/portfolio" component={Portfolio} user={currentUser} handleLogout={handleLogout} />
+          <PrivateRoute path="/create-portfolio" component={CreatePortfolio} user={currentUser} handleLogout={handleLogout} />
+          <PrivateRoute path="/edit-portfolio" component={EditPortfolio} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/store" component={Store} user={currentUser} handleLogout={handleLogout} />
           <PrivateRoute path="/profile" component={Profile} user={currentUser} handleLogout={handleLogout} />
           <Route exact path="/" component={Welcome} />
