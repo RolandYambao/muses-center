@@ -32,7 +32,7 @@ class Gallery extends Component {
 
         axios.post(`${REACT_APP_SERVER_URL}/comments`, commentData)
             .then(response => {
-               window.location.reload();
+                window.location.reload();
             })
             .catch(error => {
                 alert('No Comment Posted');
@@ -65,7 +65,13 @@ class Gallery extends Component {
             <div>
                 <div class="slider">
                     <ul>
-                        <h1 id="galleryTitle">Muses Exhibit</h1>
+                        <section className="hero bg-dark is-small">
+                            <div className="hero-body">
+                                <div className="container has-text-centered">
+                                    <p className="title" id="storeTitle" >Muses Exhibit</p>
+                                </div>
+                            </div>
+                        </section>
                         <br />
                         <li id="no-js-slider-1" class="slide">
                             <img src="https://i.imgur.com/6DHX0zB.jpeg" class="galleryImage" alt="Placeholder" />

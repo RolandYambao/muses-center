@@ -52,7 +52,7 @@ class Store extends Component {
                 <section className="hero bg-dark is-small">
                     <div className="hero-body">
                         <div className="container has-text-centered">
-                            <p className="title" id="storeTitle" >Muses Center Store</p>
+                            <p className="title" id="storeTitle" >Muses Store</p>
                         </div>
                     </div>
                 </section>

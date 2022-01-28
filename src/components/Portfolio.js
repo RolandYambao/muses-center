@@ -47,6 +47,13 @@ class Portfolio extends Component {
     render() {
         return (
             <div>
+                <section className="hero bg-dark is-small">
+                    <div className="hero-body">
+                        <div className="container has-text-centered">
+                            <p className="title" id="storeTitle" >Your Personal Art Portfolio</p>
+                        </div>
+                    </div>
+                </section>
                 {this.displayPortfolio()}
             </div>
         );
