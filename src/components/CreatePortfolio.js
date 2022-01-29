@@ -2,7 +2,6 @@ import './Portfolio.css';
 
 import React, { Component } from 'react';
 import axios from "axios";
-import PortfolioPiece from "./PortfolioPiece";
 import jwt_decode from 'jwt-decode';
 import setAuthToken from '../utils/setAuthToken';
 const { REACT_APP_SERVER_URL } = process.env;
@@ -12,7 +11,7 @@ class CreatePortfolio extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            redirect: false,
+            redirect: true,
         };
     }
 
@@ -56,6 +55,7 @@ class CreatePortfolio extends Component {
                 const decoded = jwt_decode(token);
                 // set the current user
                 this.props.nowCurrentUser(decoded); // funnction passed down as props.
+                window.location.reload();
             })
             .catch(error => {
                 alert('No Portfolio Piece Posted');
@@ -65,34 +65,32 @@ class CreatePortfolio extends Component {
     render() {
         return (
             <div>
-                {/* <div class="column is-one-third"> */}
-                    <div className="box">
-                        <figure className="avatar">
-                            <img src="https://i.imgur.com/6DHX0zB.jpeg" id="portfolioLogo" alt="Golden Eye Logo" />
-                        </figure>
-                        <form >
-                            <div className="field">
-                                <div className="control">
-                                    <input type="text" name="picture" value={this.state.pictureUrl} onChange={this.handlePicture.bind(this)} placeholder="URL" id="portfolioInputBoxAdd" />
-                                </div>
+                <div className="box">
+                    <figure className="avatar">
+                        <img src="https://i.imgur.com/6DHX0zB.jpeg" id="portfolioLogo" alt="Golden Eye Logo" />
+                    </figure>
+                    <form id="portfolioInputSection" onSubmit={this.handleSubmit.bind(this)}>
+                        <div className="field">
+                            <div className="control">
+                                <input type="text" name="picture" value={this.state.pictureUrl} onChange={this.handlePicture.bind(this)} placeholder="URL" id="portfolioInputBoxAdd" />
                             </div>
-                            <div className="field">
-                                <div className="control">
-                                    <input type="text" name="title" value={this.state.title} onChange={this.handleTitle.bind(this)} placeholder="Title" id="portfolioInputBoxAdd" />
-                                </div>
+                        </div>
+                        <div className="field">
+                            <div className="control">
+                                <input type="text" name="title" value={this.state.title} onChange={this.handleTitle.bind(this)} placeholder="Title" id="portfolioInputBoxAdd" />
                             </div>
-                            <div className="field">
-                                <div className="control">
-                                    <input type="text" name="decription" value={this.state.description} onChange={this.handleDescription.bind(this)} placeholder="Description" id="portfolioInputBoxAdd" />
-                                </div>
+                        </div>
+                        <div className="field">
+                            <div className="control">
+                                <input type="text" name="decription" value={this.state.description} onChange={this.handleDescription.bind(this)} placeholder="Description" id="portfolioInputBoxAdd" />
                             </div>
-                            <button
-                                type="submit" className="button is-block is-primary is-medium" id="portfolioInput">
-                                Add Portfolio Piece
-                            </button>
-                        </form>
-                    </div>
-                {/* </div> */}
+                        </div>
+                        <button
+                            type="submit" className="button is-block is-primary is-medium" id="portfolioInput" onClick="window.location.reload(false)">
+                            Add Portfolio Piece
+                        </button>
+                    </form>
+                </div>
             </div>
         );
     }

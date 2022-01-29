@@ -11,7 +11,7 @@ class EditPortfolio extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            redirect: false,
+            redirect: true,
         };
     }
 
@@ -39,6 +39,7 @@ class EditPortfolio extends Component {
                 const decoded = jwt_decode(token);
                 // set the current user
                 this.props.nowCurrentUser(decoded); // funnction passed down as props.
+                window.location.reload();
             })
             .catch(error => {
                 alert('No Portfolio Piece Posted');
@@ -48,12 +49,11 @@ class EditPortfolio extends Component {
     render() {
         return (
             <div>
-                {/* <div class="column is-one-third"> */}
                 <div className="box">
                     <figure className="avatar">
                         <img src="https://i.imgur.com/6DHX0zB.jpeg" id="portfolioLogo" alt="Golden Eye Logo" />
                     </figure>
-                    <form >
+                    <form id="portfolioInputSection" onSubmit={this.handleSubmit.bind(this)}>
                         <div className="field">
                             <div className="control">
                                 <input type="text" name="portfolioPiece" value={this.state.portfolioNumber} onChange={this.handlePortfolioNumber.bind(this)} placeholder="Portfolio Piece Index( Min: 1)" id="portfolioInputBoxDelete" />
@@ -65,7 +65,6 @@ class EditPortfolio extends Component {
                         </button>
                     </form>
                 </div>
-                {/* </div> */}
             </div>
         );
     }
