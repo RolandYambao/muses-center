@@ -65,15 +65,34 @@ class CreatePortfolio extends Component {
     render() {
         return (
             <div>
-                <form id="portfolioInputSection" onSubmit={this.handleSubmit.bind(this)}>
-                    <input type="text" name="picture" value={this.state.pictureUrl} onChange={this.handlePicture.bind(this)} placeholder="Profile Piece Picture URL" id="portfolioInputBox" />
-                    <br />
-                    <input type="text" name="title" value={this.state.title} onChange={this.handleTitle.bind(this)} placeholder="Portfolio Piece Title" id="portfolioInputBox" />
-                    <br />
-                    <input type="text" name="decription" value={this.state.description} onChange={this.handleDescription.bind(this)} placeholder="Portfolio Piece Description" id="portfolioInputBox" />
-                    <br />
-                    <button type="submit" id="portfolioInput">Submit</button>
-                </form>
+                {/* <div class="column is-one-third"> */}
+                    <div className="box">
+                        <figure className="avatar">
+                            <img src="https://i.imgur.com/6DHX0zB.jpeg" id="portfolioLogo" alt="Golden Eye Logo" />
+                        </figure>
+                        <form >
+                            <div className="field">
+                                <div className="control">
+                                    <input type="text" name="picture" value={this.state.pictureUrl} onChange={this.handlePicture.bind(this)} placeholder="URL" id="portfolioInputBoxAdd" />
+                                </div>
+                            </div>
+                            <div className="field">
+                                <div className="control">
+                                    <input type="text" name="title" value={this.state.title} onChange={this.handleTitle.bind(this)} placeholder="Title" id="portfolioInputBoxAdd" />
+                                </div>
+                            </div>
+                            <div className="field">
+                                <div className="control">
+                                    <input type="text" name="decription" value={this.state.description} onChange={this.handleDescription.bind(this)} placeholder="Description" id="portfolioInputBoxAdd" />
+                                </div>
+                            </div>
+                            <button
+                                type="submit" className="button is-block is-primary is-medium" id="portfolioInput">
+                                Add Portfolio Piece
+                            </button>
+                        </form>
+                    </div>
+                {/* </div> */}
             </div>
         );
     }

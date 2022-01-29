@@ -48,11 +48,24 @@ class EditPortfolio extends Component {
     render() {
         return (
             <div>
-                <form id="portfolioInputSection" onSubmit={this.handleSubmit.bind(this)}>
-                    <input type="text" name="portfolioPiece" value={this.state.portfolioNumber} onChange={this.handlePortfolioNumber.bind(this)} placeholder="Portfolio Piece Number" id="portfolioInputBox" />
-                    <br />
-                    <button type="submit" id="portfolioInput">Submit</button>
-                </form>
+                {/* <div class="column is-one-third"> */}
+                <div className="box">
+                    <figure className="avatar">
+                        <img src="https://i.imgur.com/6DHX0zB.jpeg" id="portfolioLogo" alt="Golden Eye Logo" />
+                    </figure>
+                    <form >
+                        <div className="field">
+                            <div className="control">
+                                <input type="text" name="portfolioPiece" value={this.state.portfolioNumber} onChange={this.handlePortfolioNumber.bind(this)} placeholder="Portfolio Piece Index( Min: 1)" id="portfolioInputBoxDelete" />
+                            </div>
+                        </div>
+                        <button
+                            type="submit" className="button is-block is-danger is-medium" id="portfolioInput">
+                            Delete Portfolio Piece
+                        </button>
+                    </form>
+                </div>
+                {/* </div> */}
             </div>
         );
     }
