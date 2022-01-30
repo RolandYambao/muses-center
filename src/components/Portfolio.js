@@ -54,9 +54,10 @@ class Portfolio extends Component {
                     <div className="hero-body">
                         <div className="container has-text-centered">
                             <p className="title" id="storeTitle" >Your Personal Art Portfolio</p>
+                            <p id="storeTitle">The Museum Curator would Decide if your Work may be Exhibited</p>
                         </div>
                     </div>
-                </section>
+                </section >
                 <div className="columns is-4">
                     <div className="column"><CreatePortfolio /></div>
                     <div className="column"><EditPortfolio /></div>
@@ -69,7 +70,7 @@ class Portfolio extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
         );
     }
 }

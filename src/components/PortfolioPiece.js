@@ -11,7 +11,7 @@ class PortfolioPiece extends Component {
             <div className="column is-4">
                 <div className="card large">
                     <div className="card-image">
-                        <figure className="image is-16by9">
+                        <figure className="image is-square">
                             <img src={this.props.pictureUrl} alt="Sale Image" />
                         </figure>
                     </div>
