@@ -67,7 +67,7 @@ class CreatePortfolio extends Component {
             <div>
                 <div className="box">
                     <figure className="avatar">
-                        <img src="https://i.imgur.com/6DHX0zB.jpeg" id="portfolioLogo" alt="Golden Eye Logo" />
+                        <img src="https://i.imgur.com/dg762qN.png" id="portfolioLogo" alt="Plus Sign" />
                     </figure>
                     <form id="portfolioInputSection" onSubmit={this.handleSubmit.bind(this)}>
                         <div className="field">
