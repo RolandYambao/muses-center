@@ -51,7 +51,7 @@ class EditPortfolio extends Component {
             <div>
                 <div className="box">
                     <figure className="avatar">
-                        <img src="https://i.imgur.com/iLl2PQ2.png" id="portfolioLogo" alt="Minus Sign" />
+                        <img src="https://i.imgur.com/smPpriY.png" id="portfolioLogo" alt="Minus Sign" />
                     </figure>
                     <form id="portfolioInputSection" onSubmit={this.handleSubmit.bind(this)}>
                         <div className="field">
