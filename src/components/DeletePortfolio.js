@@ -27,8 +27,8 @@ class EditPortfolio extends Component {
         const portfolioData = {
             portfolioNumber: this.state.portfolioNumber,
         }
-
-        axios.delete(`${REACT_APP_SERVER_URL}/users/delete-portfolio`, portfolioData)
+        console.log("PORTFOLIO DATA", { data: { portfolioData } })
+        axios.delete(`${REACT_APP_SERVER_URL}/users/delete-portfolio`, { data: { portfolioData } })
             .then(response => {
                 const { token } = response.data;
                 // save token to localStorage
