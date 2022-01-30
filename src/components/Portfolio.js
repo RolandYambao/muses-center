@@ -62,7 +62,13 @@ class Portfolio extends Component {
                     <div className="column"><EditPortfolio /></div>
                     <div className="column"><DeletePortfolio /></div>
                 </div>
-                {this.displayPortfolio()}
+                <div className="container">
+                    <div className="section">
+                        <div className="row columns is-multiline">
+                            {this.displayPortfolio()}
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }

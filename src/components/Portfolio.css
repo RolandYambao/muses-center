@@ -34,3 +34,7 @@
     margin-left: 25%;
     border-radius: 50%;
 }
+
+img {
+    object-fit: cover;
+}
