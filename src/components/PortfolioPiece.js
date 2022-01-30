@@ -12,7 +12,7 @@ class PortfolioPiece extends Component {
                 <div className="card large">
                     <div className="card-image">
                         <figure className="image is-square">
-                            <img src={this.props.pictureUrl} alt="Sale Image" />
+                            <img src={this.props.pictureUrl} alt="Art Url" />
                         </figure>
                     </div>
                     <div className="card-content">
