@@ -67,7 +67,6 @@ class EditPortfolio extends Component {
             .catch(error => {
                 alert('No Portfolio Piece Posted');
             });
-
         window.location.reload();
     };
 

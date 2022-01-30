@@ -10,7 +10,7 @@ class Comment extends Component {
         return (
             <div>
                 <div id="boxComment">
-                    <h1 id="critique"><span>*</span> {this.props.content}</h1>
+                    <h1 id="critique"><span>"</span>{this.props.content}<span>"</span></h1>
                     <br />
                 </div>
             </div>
