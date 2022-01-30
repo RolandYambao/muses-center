@@ -39,11 +39,11 @@ class EditPortfolio extends Component {
                 const decoded = jwt_decode(token);
                 // set the current user
                 this.props.nowCurrentUser(decoded); // funnction passed down as props.
-                window.location.reload();
             })
             .catch(error => {
                 alert('No Portfolio Piece Posted');
             });
+        window.location.reload();
     };
 
     render() {
