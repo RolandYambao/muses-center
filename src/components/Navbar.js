@@ -34,7 +34,7 @@ const Navbar = (props) => {
                             props.isAuth
                                 ? <ul className="navbar-nav">
                                     <li className="nav-item">
-                                        <NavLink className="nav-link" to="/portfolio">My Portfolio</NavLink>
+                                        <NavLink className="nav-link" to="/portfolio">Portfolio</NavLink>
                                     </li>
                                 </ul>
                                 : <h1></h1>
@@ -43,7 +43,7 @@ const Navbar = (props) => {
                             props.isAuth
                                 ? <ul className="navbar-nav">
                                     <li className="nav-item">
-                                        <NavLink className="nav-link" to="/all-users">All Artists</NavLink>
+                                        <NavLink className="nav-link" to="/artists">Artists</NavLink>
                                     </li>
                                 </ul>
                                 : <h1></h1>
