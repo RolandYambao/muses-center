@@ -52,13 +52,13 @@ class Store extends Component {
                 <section className="hero bg-dark is-small">
                     <div className="hero-body">
                         <div className="container has-text-centered">
-                            <p className="title" id="storeTitle" >Muses Store</p>
+                            <p className="title" id="storeTitle" >Muses Center Gift Cards</p>
                         </div>
                     </div>
                 </section>
                 <div className="box cta" id="storeBox">
                     <p className="has-text-centered">
-                        <span className="tag is-primary">New</span> See all Art Related Merchandise for Sale.
+                        <span className="tag is-info">New</span> See all Art Related Merchandise for Sale.
                     </p>
                 </div>
                 <section className="container">
@@ -68,8 +68,8 @@ class Store extends Component {
                                 <div className="card-image">
                                     <figure className="image is-4by3">
                                         <img
-                                            src="https://i.imgur.com/6DHX0zB.jpeg"
-                                            alt="Placeholder image"
+                                            src="https://i.imgur.com/XfD5pO5.png"
+                                            alt="Eye Logo"
                                             className="modal-button"
                                             data-target="modal-image2"
                                             id="storeImage"
@@ -78,7 +78,7 @@ class Store extends Component {
                                 </div>
                                 <div className="card-content">
                                     <div className="content">
-                                        <h4>Muses Object #1</h4>
+                                        <h4>$5 Gift Card</h4>
                                         <p>
                                             Art Piece
                                         </p>
@@ -97,15 +97,15 @@ class Store extends Component {
                                 <div className="card-image">
                                     <figure className="image is-4by3">
                                         <img
-                                            src="https://i.imgur.com/6DHX0zB.jpeg"
-                                            alt="Placeholder image"
+                                            src="https://i.imgur.com/RJPDuSY.jpeg"
+                                            alt="Eye Logo"
                                             id="storeImage"
                                         />
                                     </figure>
                                 </div>
                                 <div className="card-content">
                                     <div className="content">
-                                        <h4>Muses Object #2</h4>
+                                        <h4>$10 Gift Card</h4>
                                         <p>
                                             Art Piece
                                         </p>
@@ -124,15 +124,15 @@ class Store extends Component {
                                 <div className="card-image">
                                     <figure className="image is-4by3">
                                         <img
-                                            src="https://i.imgur.com/6DHX0zB.jpeg"
-                                            alt="Placeholder image"
+                                            src="https://i.imgur.com/G5btH1u.jpeg"
+                                            alt="Eye Logo"
                                             id="storeImage"
                                         />
                                     </figure>
                                 </div>
                                 <div className="card-content">
                                     <div className="content">
-                                        <h4>Muses Object #3</h4>
+                                        <h4>$50 Gift Card</h4>
                                         <p>
                                             Art Piece
                                         </p>
@@ -156,8 +156,8 @@ class Store extends Component {
                                 <div className="card-image">
                                     <figure className="image is-4by3">
                                         <img
-                                            src="https://i.imgur.com/6DHX0zB.jpeg"
-                                            alt="Placeholder image"
+                                            src="https://i.imgur.com/aiQfNfF.jpeg"
+                                            alt="Eye Logo"
                                             className="modal-button"
                                             data-target="modal-image2"
                                             id="storeImage"
@@ -166,7 +166,7 @@ class Store extends Component {
                                 </div>
                                 <div className="card-content">
                                     <div className="content">
-                                        <h4>Muses Object #4</h4>
+                                        <h4>$100 Gift Card</h4>
                                         <p>
                                             Art Piece
                                         </p>
@@ -185,15 +185,15 @@ class Store extends Component {
                                 <div className="card-image">
                                     <figure className="image is-4by3">
                                         <img
-                                            src="https://i.imgur.com/6DHX0zB.jpeg"
-                                            alt="Placeholder image"
+                                            src="https://i.imgur.com/gOgusrL.jpeg"
+                                            alt="Eye Logo"
                                             id="storeImage"
                                         />
                                     </figure>
                                 </div>
                                 <div className="card-content">
                                     <div className="content">
-                                        <h4>Muses Object #5</h4>
+                                        <h4>$250 Gift Card</h4>
                                         <p>
                                             Art Piece
                                         </p>
@@ -213,16 +213,16 @@ class Store extends Component {
                                     <figure className="image is-4by3">
                                         <img
                                             src="https://i.imgur.com/6DHX0zB.jpeg"
-                                            alt="Placeholder image"
+                                            alt="Eye Logo"
                                             id="storeImage"
                                         />
                                     </figure>
                                 </div>
                                 <div className="card-content">
                                     <div className="content">
-                                        <h4>Muses Object #6</h4>
+                                        <h4>$500 Gift Card</h4>
                                         <p>
-                                            Art Piece
+                                            A Wonderful Gift for Anyone
                                         </p>
                                         <span
                                             className="button is-link modal-button" onClick={this.handle500Buying.bind(this)}
