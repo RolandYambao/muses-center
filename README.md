@@ -456,10 +456,10 @@ export default CreatePortfolio;
 ![Alt text](Muses_Center_Screenshot_3.png "Muses Center Screenshot #3")
 
 
-## Wireframes:
+## Wireframe:
 ![Alt text](Muses_Center_Wireframe.png "Wireframe")
 
-## Reflections:
+## Reflection:
 I am proud of this project, for its simple yet beautiful appearance. The concept of the site is also quite utilitarian and unique, it is akin to an art portfolio website focused solely on competitiveness on making the best work.
 
 ## License
