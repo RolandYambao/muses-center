@@ -80,7 +80,7 @@ class Store extends Component {
                                     <div className="content">
                                         <h4>$5 Gift Card</h4>
                                         <p>
-                                            Art Piece
+                                            A Simple Gift
                                         </p>
                                         <span
                                             className="button is-link modal-button" onClick={this.handle5Buying.bind(this)}
@@ -107,7 +107,7 @@ class Store extends Component {
                                     <div className="content">
                                         <h4>$10 Gift Card</h4>
                                         <p>
-                                            Art Piece
+                                            Better than the Last
                                         </p>
                                         <span
                                             className="button is-link modal-button" onClick={this.handle10Buying.bind(this)}
@@ -134,7 +134,7 @@ class Store extends Component {
                                     <div className="content">
                                         <h4>$50 Gift Card</h4>
                                         <p>
-                                            Art Piece
+                                            Getting Higher in Value
                                         </p>
                                         <span
                                             className="button is-link modal-button" onClick={this.handle50Buying.bind(this)}
@@ -168,7 +168,7 @@ class Store extends Component {
                                     <div className="content">
                                         <h4>$100 Gift Card</h4>
                                         <p>
-                                            Art Piece
+                                            Strongly Desired by Many
                                         </p>
                                         <span
                                             className="button is-link modal-button" onClick={this.handle100Buying.bind(this)}
@@ -195,7 +195,7 @@ class Store extends Component {
                                     <div className="content">
                                         <h4>$250 Gift Card</h4>
                                         <p>
-                                            Art Piece
+                                            Lovers of Wealth shall Rejoice
                                         </p>
                                         <span
                                             className="button is-link modal-button" onClick={this.handle250Buying.bind(this)}
@@ -222,7 +222,7 @@ class Store extends Component {
                                     <div className="content">
                                         <h4>$500 Gift Card</h4>
                                         <p>
-                                            A Wonderful Gift for Anyone
+                                            Spoiling the Recipient are we?
                                         </p>
                                         <span
                                             className="button is-link modal-button" onClick={this.handle500Buying.bind(this)}
