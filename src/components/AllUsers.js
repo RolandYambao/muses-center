@@ -47,7 +47,7 @@ class AllUsers extends Component {
                 <section className="hero bg-dark is-small">
                     <div className="hero-body">
                         <div className="container has-text-centered">
-                            <p className="title" id="storeTitle" >All Contributors to the Muses Center</p>
+                            <p className="title" id="storeTitle" >All Users to the Muses Center</p>
                         </div>
                     </div>
                 </section>
